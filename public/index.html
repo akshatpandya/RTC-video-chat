@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <title>PeerJS - Video chat example</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://cdn.peerjs.com/0.3/peer.js"></script>
+  <body>
+    <div id="wrapper">
+
+      <div id="video-container">
+        <video id="their-video" autoplay></video>
+        <video id="my-video" muted="true" autoplay></video>
+      </div>
+
+
+      <div>
+
+        <div id="step1">
+          <div id="step1-error">
+            <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click allow when asked for permission by the browser.</p>
+            <button type="button" name="try" id="step1-retry">Try again</button>
+          </div>
+        </div>
+
+
+        <div id="step2">
+          <p>Your id: <span id="my-id">...</span></p>
+          <p>Share this id with others so they can call you.</p>
+          <h3>Make a call</h3>
+          <div>
+            <input type="text" placeholder="Call user id..." id="callto-id">
+            <button type="button" name="make-call" id="make-call">Call</button>
+          </div>
+        </div>
+
+    
+        <div id="step3">
+          <p>Currently in call with <span id="their-id">...</span></p>
+          <button type="button" name="end-call" id="end-call">End call</button>
+        </div>
+      </div>
+      <button type="button" name="start" id="start">START</button>
+    </div>
+    <script type="text/javascript" src="client.js"></script>
+  </body>
+</html>
